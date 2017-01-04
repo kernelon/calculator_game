@@ -29,6 +29,15 @@ class Quiz:
         # if the answer is false, return false
         # send the elapse time
 
+    def total_correct(self):
+        # return the total number of correct answers
+
     def summary(self):
         # print how many questions were correct and how many was wrong eg: 5/10
+        print("You got {}/{} right".format(
+                self.total_correct(), len(questions)
+        ))
         # print the total time taken to complete the quiz eg: 30 seconds
+        print("It took you {} seconds to complete the quiz".format(
+                (self.end_time-self.start_time).seconds
+        ))
